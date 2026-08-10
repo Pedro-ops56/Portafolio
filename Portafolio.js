@@ -350,6 +350,7 @@ window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') closeModal();
 });
 
+/* Ejecuta un comando ingresado en la terminal simulada */
 const runCommand = (command) => {
     const cmd = command.trim().toLowerCase();
     appendLine(`<span class="prompt">root@pedro:~$</span> ${command}`);
@@ -429,6 +430,7 @@ const runCommand = (command) => {
     appendLine(`Comando no reconocido: <strong>${cmd}</strong>. Usa <strong>help</strong>.`, 'error');
 };
 
+/* Maneja el envío del formulario de la terminal simulada */
 terminalForm?.addEventListener('submit', (event) => {
     event.preventDefault();
     const command = terminalInput?.value ?? '';
@@ -444,6 +446,7 @@ terminalForm?.addEventListener('submit', (event) => {
     }
 });
 
+/* Maneja la navegación por el historial de comandos con las flechas arriba y abajo */
 terminalInput?.addEventListener('keydown', (event) => {
     if (!commandHistory.length) return;
 
@@ -460,6 +463,7 @@ terminalInput?.addEventListener('keydown', (event) => {
     }
 });
 
+/* Maneja el envío del formulario de contacto */
 contactForm?.addEventListener('submit', (event) => {
     event.preventDefault();
 
