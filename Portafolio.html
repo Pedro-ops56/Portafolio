@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio personal de Pedro Pérez, desarrollador web con enfoque en interfaces creativas, rendimiento y experiencia de usuario.">
+    <title>Pedro Pérez | Desarrollador Web Cyberpunk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Portafolio.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div class="particles" aria-hidden="true"></div>
+    <div class="grid-overlay"></div>
+    <div class="circuit-overlay" aria-hidden="true"></div>
+    <div class="hex-overlay" aria-hidden="true"></div>
+    <div class="holo-flares" aria-hidden="true"></div>
+    <div class="scanline"></div>
+
+    <header class="hero">
+        <nav class="nav" id="nav" aria-label="Navegación principal">
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#terminal">Terminal</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+        </nav>
+
+        <div class="hud-panel">
+            <div class="hud-line"></div>
+            <div class="hud-line"></div>
+            <div class="hud-line"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text reveal">
+                <div class="avatar">
+                    <div class="avatar-inner">
+                        <img src="assets/Avatar.png" alt="Avatar de Pedro Perez" width="84" height="84">
+                    </div>
+                </div>
+                <p class="eyebrow">// System Boot Sequence</p>
+                <h1><span class="hack-text" data-text="PEDRO.PEREZ">PEDRO.PEREZ</span></h1>
+                <p class="matrix-text">Módulo de interfaz web inicializado. Diseñando experiencias rápidas, memorables y listas para misión digital.</p>
+                <div class="boot-log" aria-label="Registro de arranque">
+                    <p><span>[OK]</span> Kernel visual cargado</p>
+                    <p><span>[OK]</span> Módulos UI conectados</p>
+                    <p><span>[RUN]</span> Enlace con proyectos activos</p>
+                </div>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#proyectos">Abrir proyectos</a>
+                    <a class="btn btn-secondary" href="#terminal">Iniciar terminal</a>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal">
+                <div class="hero-3d">
+                    <div class="orbital-ring"></div>
+                    <div class="core"></div>
+                </div>
+                <div class="hero-hud system-grid">
+                    <article class="mini-panel status-online">
+                        <p class="panel-title">Estado</p>
+                        <div class="hud-row"><span>Nodo</span><strong>ONLINE</strong></div>
+                        <div class="pulse-dot"></div>
+                    </article>
+                    <article class="mini-panel status-warn">
+                        <p class="panel-title">CPU</p>
+                        <div class="meter"><span class="meter-fill cpu-fill" data-value="74"></span></div>
+                        <div class="hud-row"><span>Carga</span><strong class="cpu-value">74%</strong></div>
+                    </article>
+                    <article class="mini-panel status-info">
+                        <p class="panel-title">Red</p>
+                        <div class="meter"><span class="meter-fill net-fill" data-value="88"></span></div>
+                        <div class="hud-row"><span>Enlace</span><strong class="net-value">4G</strong></div>
+                        <div class="hud-row"><span>Latencia</span><strong class="latency-value">14 ms</strong></div>
+                    </article>
+                    <article class="mini-panel status-caution">
+                        <p class="panel-title">Coordenadas</p>
+                        <div class="hud-row"><span>LAT</span><strong>19.4326</strong></div>
+                        <div class="hud-row"><span>LON</span><strong>-99.1332</strong></div>
+                    </article>
+                </div>
+                <div class="radar" aria-hidden="true"><span class="radar-sweep"></span></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" id="main-content">
+        <section id="sobre-mi" class="card reveal" aria-labelledby="sobre-mi-title">
+            <h2 id="sobre-mi-title">Sobre mí</h2>
+            <p>Soy un desarrollador web que mezcla creatividad, tecnología y lógica para crear productos digitales con identidad propia y alto impacto visual.</p>
+            <p>Me especializo en interfaces interactivas, diseño responsivo y experiencias de usuario que combinan estética y funcionalidad.</p>
+            <p>Mi enfoque es entregar soluciones rápidas, eficientes y memorables, siempre con atención al detalle y cumpliendo con las expectativas del cliente.</p>
+            <p>Estoy en constante aprendizaje de nuevas tecnologías y tendencias para mantenerme a la vanguardia en el desarrollo web.</p>
+            <p>Si buscas un desarrollador que pueda transformar ideas en experiencias digitales únicas, estoy listo para colaborar en tu próximo proyecto.</p>
+            <p>Mi objetivo es crear productos digitales que no solo funcionen bien, sino que también dejen una impresión duradera en los usuarios.</p>
+            <p>Me apasiona la innovación y siempre busco maneras de mejorar la experiencia del usuario a través de un diseño intuitivo y atractivo.</p>
+            <p>Además de mis habilidades técnicas, valoro la comunicación efectiva y la colaboración en equipo para lograr resultados sobresalientes en cada proyecto.</p>
+            <p>Estoy abierto a nuevas oportunidades y desafíos que me permitan crecer profesionalmente y contribuir al éxito de los proyectos en los que participo.</p> 
+        </section>
+
+        <section id="habilidades" class="card reveal" aria-labelledby="habilidades-title">
+            <h2 id="habilidades-title">Habilidades</h2>
+            <div class="tech-icons">
+                <div class="tech-item reveal"><span>🌐</span><p>HTML5</p></div>
+                <div class="tech-item reveal"><span>🎨</span><p>CSS3</p></div>
+                <div class="tech-item reveal"><span>⚙️</span><p>JavaScript</p></div>
+                <div class="tech-item reveal"><span>📱</span><p>Responsive</p></div>
+                <div class="tech-item reveal"><span>🧩</span><p>Bootstrap</p></div>
+                <div class="tech-item reveal"><span>🗂️</span><p>Git</p></div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="card reveal" aria-labelledby="proyectos-title">
+            <h2 id="proyectos-title">Proyectos</h2>
+            <div class="project-grid">
+                <article id="proyecto-01" class="project-item reveal" data-project="proyecto-01" data-demo="../Primer Parcial/Tareas/Entregrable 1/Portafolio personal.html" data-github="https://github.com/Pedro-ops56/3erCuatrimestre_DPW_P-rez_Pedro/tree/main/Primer%20Parcial/Tareas/Entregrable%201">
+                    <img src="assets/project-01.svg" alt="Captura del proyecto Portafolio personal">
+                    <div class="project-body">
+                        <h3>01 // Portafolio</h3>
+                        <p>Diseño visual y estructura moderna para mostrar trabajo y personalidad.</p>
+                        <div class="project-actions">
+                            <a href="../Primer Parcial/Tareas/Entregrable 1/Portafolio personal.html" class="btn btn-sm btn-demo" target="_blank" rel="noopener noreferrer">Demo</a>
+                            <a href="https://github.com/Pedro-ops56/3erCuatrimestre_DPW_P-rez_Pedro/tree/main/Primer%20Parcial/Tareas/Entregrable%201" class="btn btn-sm btn-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article id="proyecto-02" class="project-item reveal" data-project="proyecto-02" data-demo="../Segundo Parcial/actividadParticipacion1/index.html" data-github="https://github.com/Pedro-ops56/3erCuatrimestre_DPW_P-rez_Pedro/tree/main/Segundo%20Parcial/actividadParticipacion1">
+                    <img src="assets/project-02.svg" alt="Captura del proyecto Landing page">
+                    <div class="project-body">
+                        <h3>02 // Landing</h3>
+                        <p>Experiencia enfocada en conversión, claridad y estilo premium.</p>
+                        <div class="project-actions">
+                            <a href="../Segundo Parcial/actividadParticipacion1/index.html" class="btn btn-sm btn-demo" target="_blank" rel="noopener noreferrer">Demo</a>
+                            <a href="https://github.com/Pedro-ops56/3erCuatrimestre_DPW_P-rez_Pedro/tree/main/Segundo%20Parcial/actividadParticipacion1" class="btn btn-sm btn-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article id="proyecto-03" class="project-item reveal" data-project="proyecto-03" data-demo="../Segundo Parcial/participacion4/index.html" data-github="https://github.com/Pedro-ops56/3erCuatrimestre_DPW_P-rez_Pedro/tree/main/Segundo%20Parcial/participacion4">
+                    <img src="assets/project-03.svg" alt="Captura del proyecto Web App">
+                    <div class="project-body">
+                        <h3>03 // Web App</h3>
+                        <p>Interfaces interactivas con enfoque en rendimiento y UX.</p>
+                        <div class="project-actions">
+                            <a href="../Segundo Parcial/participacion4/index.html" class="btn btn-sm btn-demo" target="_blank" rel="noopener noreferrer">Demo</a>
+                            <a href="https://github.com/Pedro-ops56/3erCuatrimestre_DPW_P-rez_Pedro/tree/main/Segundo%20Parcial/participacion4" class="btn btn-sm btn-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article id="proyecto-04" class="project-item reveal" data-project="proyecto-04" data-demo="../Segundo Parcial/Tareas/Tarea5/Tecnologi.html" data-github="https://github.com/Pedro-ops56/3erCuatrimestre_DPW_P-rez_Pedro/tree/main/Segundo%20Parcial/Tareas/Tarea5">
+                    <img src="assets/project-04.svg" alt="Captura del proyecto E-commerce">
+                    <div class="project-body">
+                        <h3>04 // E-commerce</h3>
+                        <p>Plataforma de venta online con diseño atractivo y funcional.</p>
+                        <div class="project-actions">
+                            <a href="../Segundo Parcial/Tareas/Tarea5/Tecnologi.html" class="btn btn-sm btn-demo" target="_blank" rel="noopener noreferrer">Demo</a>
+                            <a href="https://github.com/Pedro-ops56/3erCuatrimestre_DPW_P-rez_Pedro/tree/main/Segundo%20Parcial/Tareas/Tarea5" class="btn btn-sm btn-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article id="proyecto-05" class="project-item reveal" data-project="proyecto-05" data-demo="../Segundo Parcial/Tareas/Tarea4/Portal.html" data-github="https://github.com/Pedro-ops56/3erCuatrimestre_DPW_P-rez_Pedro/tree/main/Segundo%20Parcial/Tareas/Tarea4">
+                    <img src="assets/project-05.svg" alt="Captura del proyecto Blog">
+                    <div class="project-body">
+                        <h3>05 // Blog</h3>
+                        <p>Plataforma de contenido con estilo moderno y enfoque en lectura.</p>
+                        <div class="project-actions">
+                            <a href="../Segundo Parcial/Tareas/Tarea4/Portal.html" class="btn btn-sm btn-demo" target="_blank" rel="noopener noreferrer">Demo</a>
+                            <a href="https://github.com/Pedro-ops56/3erCuatrimestre_DPW_P-rez_Pedro/tree/main/Segundo%20Parcial/Tareas/Tarea4" class="btn btn-sm btn-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <a href="../Segundo Parcial/Tareas/Tarea4/Portal.html" class="btn btn-sm btn-more reveal" target="_blank" rel="noopener noreferrer">Ver más proyectos</a>
+                <article id="proyecto-06" class="project-item reveal" data-project="proyecto-06" data-demo="../Segundo Parcial/Tareas/Tarea2/Restaurante.html" data-github="https://github.com/Pedro-ops56/3erCuatrimestre_DPW_P-rez_Pedro/tree/main/Segundo%20Parcial/Tareas/Tarea2">
+                    <img src="assets/project-06.svg" alt="Captura del proyecto Dashboard">
+                    <div class="project-body">
+                        <h3>06 // Dashboard</h3>
+                        <p>Panel de control con métricas y visualización de datos en tiempo real.</p>
+                        <div class="project-actions">
+                            <a href="../Segundo Parcial/Tareas/Tarea2/Restaurante.html" class="btn btn-sm btn-demo" target="_blank" rel="noopener noreferrer">Demo</a>
+                            <a href="https://github.com/Pedro-ops56/3erCuatrimestre_DPW_P-rez_Pedro/tree/main/Segundo%20Parcial/Tareas/Tarea2" class="btn btn-sm btn-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="terminal" class="card terminal-card reveal" aria-labelledby="terminal-title">
+            <h2 id="terminal-title">Terminal de Comando</h2>
+            <p class="terminal-subtitle">Consulta estado rápido con comandos: <strong>help</strong>, <strong>about</strong>, <strong>skills</strong>, <strong>status</strong>, <strong>projects</strong>, <strong>open proyecto-01 demo</strong>, <strong>open proyecto-01 github</strong>, <strong>contact</strong>, <strong>date</strong>, <strong>clear</strong>.</p>
+            <div class="terminal-shell">
+                <div class="terminal-head">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <p>hud-shell://pedro.system</p>
+                </div>
+                <div class="terminal-output" id="terminalOutput" aria-live="polite">
+                    <p><span class="prompt">root@pedro:~$</span> boot terminal</p>
+                    <p class="ok">Sistema listo. Escribe <strong>help</strong> para comenzar.</p>
+                </div>
+                <form class="terminal-input-row" id="terminalForm">
+                    <label for="terminalInput" class="sr-only">Ingresar comando</label>
+                    <span class="prompt">root@pedro:~$</span>
+                    <input type="text" id="terminalInput" autocomplete="off" placeholder="escribe un comando..." />
+                    <button type="submit" class="btn btn-sm btn-demo">Ejecutar</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contacto" class="card contact-card reveal" aria-labelledby="contacto-title">
+            <h2 id="contacto-title">Contacto</h2>
+            <p>Disponible para proyectos, colaboraciones o oportunidades que requieran creatividad y código.</p>
+            <p class="contact-hint">Envía una señal de misión y te responderé desde el canal interno.</p>
+
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-grid">
+                    <label class="field">
+                        <span>Nombre</span>
+                        <input type="text" id="contactName" name="name" placeholder="Tu nombre" required>
+                    </label>
+                    <label class="field">
+                        <span>Correo</span>
+                        <input type="email" id="contactEmail" name="email" placeholder="tu@email.com" required>
+                    </label>
+                    <label class="field">
+                        <span>Proyecto</span>
+                        <input type="text" id="contactProject" name="project" placeholder="Landing, app, e-commerce...">
+                    </label>
+                    <label class="field">
+                        <span>Prioridad</span>
+                        <select id="contactPriority" name="priority">
+                            <option value="Alta">Alta</option>
+                            <option value="Media" selected>Media</option>
+                            <option value="Baja">Baja</option>
+                        </select>
+                    </label>
+                </div>
+
+                <label class="field field-full">
+                    <span>Mensaje</span>
+                    <textarea id="contactMessage" name="message" rows="5" placeholder="Describe tu idea o necesidad..." required></textarea>
+                </label>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Enviar señal</button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite">Listo para recibir tu mensaje.</p>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Pedro Pérez. Todos los derechos reservados.</p>
+        <nav class="footer-nav">
+            <p>Redes sociales:</p>
+            <a href="https://www.linkedin.com/in/pedro-perez" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/Pedro-ops56" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://twitter.com/pedro_perez" target="_blank" rel="noopener noreferrer">Twitter</a>
+        </nav>
+    </footer>
+
+    <div class="modal-backdrop" id="projectModal" aria-hidden="true">
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <h3 id="modalTitle">Proyecto</h3>
+            <div id="modalBody"></div>
+            <div class="modal-actions" id="modalActions"></div>
+            <button class="btn btn-sm btn-secondary" id="modalClose" type="button">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="Portafolio.js"></script>
+</body>
+</html>
